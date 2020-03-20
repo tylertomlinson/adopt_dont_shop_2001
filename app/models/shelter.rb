@@ -1,3 +1,4 @@
 class Shelter < ApplicationRecord
-  # validates_precense_of :name, :location
+  validates_presence_of :name, :address, :city, :state, :zip
+  has_many :pets
 end
