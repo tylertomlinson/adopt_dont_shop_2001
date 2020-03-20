@@ -11,6 +11,7 @@ RSpec.describe "shelters index page", type: :feature do
   it "will be taken to '/shelters/new'" do
 
     visit "/shelters"
+
     click_link "Create New Shelter"
 
     expect(current_path).to eq("/shelters/new")
