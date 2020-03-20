@@ -1,3 +1,3 @@
 class Pet < ApplicationRecord
-  # validates_precense_of :name, :location
+  validates_presence_of :image, :name, :approximate_age, :sex, :current_shelter
 end

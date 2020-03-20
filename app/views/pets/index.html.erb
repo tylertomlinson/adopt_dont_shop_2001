@@ -1,2 +1,26 @@
-<h1>Pets#index</h1>
-<p>Find me in app/views/pets/index.html.erb</p>
+<h1>Pets</h1>
+
+<% @pets.each do |pet| %>
+  <p>
+    <img src= <%= pet.image %>>
+    <h3>Name: <%= pet.name %><h3>
+      <br/>
+    <h3>Approximate Age: <%= pet.approximate_age %><h3>
+      <br/>
+    <h3>Sex: <%= pet.sex %><h3>
+    <<h3>Current Shelter: <%= pet.current_shelter %><h3>
+  <p>
+<% end %>
+
+
+<!--
+[ ] done
+
+As a visitor
+When I visit '/pets'
+Then I see each Pet in the system including the Pet's:
+- image
+- name
+- approximate age
+- sex
+- name of the shelter where the pet is currently located -->
