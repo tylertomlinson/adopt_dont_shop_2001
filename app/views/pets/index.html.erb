@@ -1,26 +1,16 @@
 <h1>Pets</h1>
 
 <% @pets.each do |pet| %>
-  <p>
-    <img src= <%= pet.image %>>
-    <h3>Name: <%= pet.name %><h3>
-      <br/>
-    <h3>Approximate Age: <%= pet.approximate_age %><h3>
-      <br/>
-    <h3>Sex: <%= pet.sex %><h3>
-    <<h3>Current Shelter: <%= pet.current_shelter %><h3>
-  <p>
+  <img src=<%= pet.image %> ></img>
+  <h4>Name:</h4>
+  <%= pet.name %>
+  <h4>Approximate Age:</h4>
+  <%= pet.age %>
+  <h4>Sex:</h4>
+  <%= pet.sex %>
+  <h4>Shelter:</h4>
+  <%= pet.shelter.name %>
+  <br/>
+  <br/>
+  <br/>
 <% end %>
-
-
-<!--
-[ ] done
-
-As a visitor
-When I visit '/pets'
-Then I see each Pet in the system including the Pet's:
-- image
-- name
-- approximate age
-- sex
-- name of the shelter where the pet is currently located -->
