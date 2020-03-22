@@ -28,4 +28,4 @@ Pet.create(           image: "https://i.imgur.com/wKls5bM.png",
 
 
 puts "Created #{Shelter.count} Shelters"
-puts "Created #{Pet.count} Shelters"
+puts "Created #{Pet.count} Pets"
