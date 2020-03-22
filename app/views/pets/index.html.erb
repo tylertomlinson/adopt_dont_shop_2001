@@ -1,7 +1,7 @@
 <h1>Pets</h1>
 
 <% @pets.each do |pet| %>
-  <img src=<%= pet.image %> ></img>
+  <%= image_tag (pet.image) %>
   <h4>Name:</h4>
   <%= pet.name %>
   <h4>Approximate Age:</h4>

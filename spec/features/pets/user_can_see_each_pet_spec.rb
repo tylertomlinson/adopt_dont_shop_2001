@@ -28,13 +28,13 @@ RSpec.describe "pets index page", type: :feature do
 
     visit '/pets'
 
-    expect(page.find("#img-#{pet_1.id}")['src']).to have_content "#{pet_1.image}"
+    expect(page).to have_css("img[src*='#{pet_1.image}']")
     expect(page).to have_content(pet_1.name)
     expect(page).to have_content(pet_1.age)
     expect(page).to have_content(pet_1.sex)
     expect(page).to have_content(pet_1.shelter.name)
 
-    expect(page.find("#img-#{pet_2.id}")['src']).to have_content "#{pet_2.image}"
+    expect(page).to have_css("img[src*='#{pet_2.image}']")
     expect(page).to have_content(pet_2.name)
     expect(page).to have_content(pet_2.age)
     expect(page).to have_content(pet_2.sex)
