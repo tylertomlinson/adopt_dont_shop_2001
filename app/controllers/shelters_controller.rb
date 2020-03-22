@@ -4,12 +4,12 @@ class SheltersController < ApplicationController
     @shelters = Shelter.all
   end
 
-  def new; end
+  def new
+  end
 
   # def create
-  #   Shelter.create(shelter_params)
-  #
-  #   redirect_to "/shelters"
+  #   shelter = Shelter.create(shelter_params)
+  #   redirect_to '/shelters'
   # end
 
   def create
@@ -37,12 +37,11 @@ class SheltersController < ApplicationController
  def update
    shelter = Shelter.find(params[:id])
    shelter.update({
-                   name:     params[:shelter][:name],
-                   address:  params[:shelter][:address],
-                   city:     params[:shelter][:city],
-                   state:    params[:shelter][:state],
-                   zip:      params[:shelter][:zip]
-                  })
+        name:     params[:shelter][:name],
+        address:  params[:shelter][:address],
+        city:     params[:shelter][:city],
+        state:    params[:shelter][:state],
+        zip:      params[:shelter][:zip]})
    shelter.save
 
    redirect_to "/shelters/#{shelter.id}"
