@@ -1,0 +1,13 @@
+<h2>All Pets: <%= @shelter.name %></h2>
+
+  <% @pets.each do |pet| %>
+  <h3><%= pet.name %></h3>
+  <%= image_tag ( pet.image ) %>
+  <h4>Approximate Age:</h4>
+  <%= pet.age %>
+  <h4>Sex:</h4>
+  <%= pet.sex %>
+<% end %>
+<br>
+<br>
+  <a href="/shelters/<%= @shelter.id %>/pets/new">Add Adoptable Pet</a>

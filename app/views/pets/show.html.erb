@@ -1,0 +1,21 @@
+<h1>Info</h1>
+
+<h3><%= @pet.name %></h3>
+<%= image_tag ( @pet.image ) %>
+<h4>Name:</h4>
+<%= @pet.name %>
+<h4>Description:</h4>
+<%= @pet.description %>
+<h4>Approximate Age:</h4>
+<%= @pet.age %>
+<h4>Sex:</h4>
+<%= @pet.sex %>
+<h4>Status:</h4>
+<%= @pet.status %>
+<h4>Shelter:</h4>
+<%= @pet.shelter.name %>
+
+<form action='/pets/<%= @pet.id %>' method='post'>
+  <%= link_to 'Edit', "/pets/#{@pet.id}/edit" %>
+  <%= link_to 'Delete', "/pets/#{@pet.id}", method: :delete %>
+</form>
