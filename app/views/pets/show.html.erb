@@ -1,25 +1,26 @@
+<div class="form-group">
 <h1>Info</h1>
 
-<h2><%= @pet.name %></h2>
+<h4><%= @pet.name %></h4>
 <%= image_tag ( @pet.image ) %>
-<div class="form-group">
-<h2>Description:</h2>
+
+<h4>Description:</h4>
 <%= @pet.description  %>
 <br>
 <br>
-<h2>Approximate Age:</h2>
+<h4>Approximate Age:</h4>
 <%= @pet.age %>
 <br>
 <br>
-<h2>Sex:</h2>
+<h4>Sex:</h4>
 <%= @pet.sex %>
 <br>
 <br>
-<h2>Status:</h2>
+<h4>Status:</h4>
 <%= @pet.status %>
 <br>
 <br>
-<h2>Shelter:</h2>
+<h4>Shelter:</h4>
 <%= link_to "#{@pet.shelter.name}", "/shelters/#{@pet.shelter.id}" %>
 <br/>
 <br/>

@@ -1,8 +1,7 @@
+<div class="form-group">
 <h1>Update Pet</h1>
-<div class="form">
 <%= form_tag("/pets/#{@pet.id}", method: :patch) do %>
 <br>
-<div class="form-group">
   <%= label_tag "Image URL:" %>
   <%= text_field_tag :image, @pet.image %>
   <br>
@@ -24,5 +23,5 @@
   <br>
   <br>
   <button type="submit">Submit</button>
-   <div>
 <% end %>
+<div>
