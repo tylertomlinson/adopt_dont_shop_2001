@@ -1,22 +1,30 @@
 <h1>Info</h1>
 
-<h3><%= @pet.name %></h3>
+<h2><%= @pet.name %></h2>
 <%= image_tag ( @pet.image ) %>
-<h4>Name:</h4>
-<%= @pet.name %>
-<h4>Description:</h4>
-<%= @pet.description %>
-<h4>Approximate Age:</h4>
+<div class="form-group">
+<h2>Description:</h2>
+<%= @pet.description  %>
+<br>
+<br>
+<h2>Approximate Age:</h2>
 <%= @pet.age %>
-<h4>Sex:</h4>
+<br>
+<br>
+<h2>Sex:</h2>
 <%= @pet.sex %>
-<h4>Status:</h4>
+<br>
+<br>
+<h2>Status:</h2>
 <%= @pet.status %>
-<h4>Shelter:</h4>
-<%= @pet.shelter.name %>
+<br>
+<br>
+<h2>Shelter:</h2>
+<%= link_to "#{@pet.shelter.name}", "/shelters/#{@pet.shelter.id}" %>
 <br/>
 <br/>
 <form action='/pets/<%= @pet.id %>' method='post'>
   <%= link_to 'Edit', "/pets/#{@pet.id}/edit" %>
-  <%= link_to 'Delete', "/pets/#{@pet.id}", method: :delete %>
+  <%= link_to 'Delete', "/pets/#{@pet.id}", method: :delete,  data: { confirm: "Are you sure?" }%>
 </form>
+<div>
