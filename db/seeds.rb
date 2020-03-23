@@ -44,7 +44,7 @@ Pet.destroy_all
                       age: "1",
                       sex: "female",
                       status: "adoptable",
-                      shelter_id: @shelter_2)
+                      shelter_id: @shelter_2.id)
 
 
 puts "Created #{Shelter.count} Shelters"
