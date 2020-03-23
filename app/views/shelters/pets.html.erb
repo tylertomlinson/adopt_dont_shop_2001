@@ -1,4 +1,4 @@
-<h2>All Pets: <%= @shelter.name %></h2>
+<h2>All Pets within Shelter: <%= link_to "#{@shelter.name}", "/shelters/#{@shelter.id}" %></h2>
 
   <% @pets.each do |pet| %>
   <h3><%= pet.name %></h3>
