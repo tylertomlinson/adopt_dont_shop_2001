@@ -1,8 +1,9 @@
 <h1>Pets</h1>
 
 <% @pets.each do |pet| %>
-  <%= image_tag (pet.image) %>
-  <h4>Name:</h4>
+
+<img src=<%= pet.image %> <%= pet.id %>></img>
+  <h4>Name:<h4>
   <%= pet.name %>
   <h4>Approximate Age:</h4>
   <%= pet.age %>
@@ -10,7 +11,6 @@
   <%= pet.sex %>
   <h4>Shelter:</h4>
   <%= pet.shelter.name %>
-  <h4>Shelter: <a href="/shelters/<%= pet.shelter.id %>"><%= pet.shelter.name %></a><h4>
   <br/>
   <br/>
   <br/>
