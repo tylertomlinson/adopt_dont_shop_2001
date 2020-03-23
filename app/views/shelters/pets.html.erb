@@ -1,7 +1,7 @@
-<h2>All Pets: <%= @shelter.name %></h2>
+<h2>All Pets within Shelter: <%= link_to "#{@shelter.name}", "/shelters/#{@shelter.id}" %></h2>
 
   <% @pets.each do |pet| %>
-  <h3><%= pet.name %></h3>
+  <h3><%= link_to "#{pet.name}", "/pets/#{pet.id}" %></h3>
   <%= image_tag ( pet.image ) %>
   <h4>Approximate Age:</h4>
   <%= pet.age %>
